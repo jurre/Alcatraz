@@ -93,6 +93,10 @@ static NSString *const SEARCH_AND_CLASS_PREDICATE_FORMAT = @"(name contains[cd] 
     [self updatePredicate];
 }
 
+- (NSArray *)tableSortDescriptors {
+    return @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]];
+}
+
 #pragma mark - Private
 
 - (void)removePackage:(ATZPackage *)package andUpdateCheckbox:(NSButton *)checkbox {

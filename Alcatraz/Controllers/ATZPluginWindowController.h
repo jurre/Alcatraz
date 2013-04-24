@@ -40,4 +40,5 @@
 - (IBAction)showOnlyColorSchemes:(id)sender;
 - (IBAction)showOnlyTemplates:(id)sender;
 
+- (NSArray *)tableSortDescriptors;
 @end
